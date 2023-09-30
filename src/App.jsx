@@ -1,9 +1,13 @@
 import React from 'react'
+import Navbar from './LayoutComponents/Navbar'
+import Hero from './LayoutComponents/Hero'
+import Main from './LayoutComponents/Main'
 
 const App = () => {
   return (
-    <div>
-      <h1>My App</h1>
+    <div className='relative h-screen text-white bg-black w-full'>
+      <Navbar />
+      <Main/>
     </div>
   )
 }
