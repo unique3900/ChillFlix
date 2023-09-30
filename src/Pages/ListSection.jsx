@@ -20,10 +20,10 @@ const ListSection = ({ id, title, url }) => {
           <div className="py-5 px-3 bg-black">
               <h2 className="text-4xl">{title}</h2>
 
-              <div className=" relative w-full flex flex-col flex-nowrap justify-center items-center gap-2 mx-auto py-4 px-4 lg:px-14 tracking-widest" >
+              <div className=" relative w-full flex flex-col  justify-center items-center gap-2 mx-auto py-4 px-4 " >
                   <div  className='scrollbar-hide scroll-smooth '>
                       {
-                          movies.slice(0,12)?.map((item, index) => (
+                          movies.slice(0,10)?.map((item, index) => (
                             <Movie index={index} item={item}/>
                           ))
                       }

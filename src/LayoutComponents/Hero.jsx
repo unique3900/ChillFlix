@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { requestPoints } from '../Requests';
-
+import { AiOutlinePlayCircle , AiOutlineVideoCameraAdd} from 'react-icons/ai';
+import { BiBookAdd } from 'react-icons/bi';
 
 
 
@@ -44,10 +45,10 @@ const Hero = () => {
 
       {/* Buttons */}
 
-      <div className="absolute top-[25%] left-[10%] w-[80%] lg:w-[20%]">
+      <div className="absolute top-[25%] left-[10%] w-[80%] lg:w-[30%]">
         <div className="group flex justify-between items-center  border-2  border-white font-bold text-lg">
-          <button className="text-black px-3 py-6 w-full bg-white group-hover:text-white group-hover:bg-transparent">Stream Now</button>
-          <button className="text-white group-hover:text-black group-hover:bg-white px-3 py-6 w-full bg-transparent">Watch later</button>
+          <button className="text-black px-3 py-6 w-full bg-white group-hover:text-white group-hover:bg-transparent flex justify-center items-center gap-2">Stream Now <span><AiOutlinePlayCircle size={40}/></span> </button>
+          <button className="text-white group-hover:text-black group-hover:bg-white px-3 py-6 w-full bg-transparent flex justify-center items-center gap-2">Watch later <span><AiOutlineVideoCameraAdd size={40}/></span> </button>
         </div>
       </div>
 
