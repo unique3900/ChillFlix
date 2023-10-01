@@ -1,6 +1,10 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { auth } from '../firebase';
+import { auth,db } from '../firebase';
+import { doc, setDoc } from 'firebase/firestore';
+import { Firestore } from 'firebase/firestore';
+
+
 const UserAuth = createContext();
 const AuthContext = ({ children }) => {
     
@@ -12,7 +16,14 @@ const AuthContext = ({ children }) => {
     return signOut(auth);
   }
   const signup = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+    createUserWithEmailAndPassword(auth, email, password);
+
+
+    // Now whenever a user signups his database is created automatically that contains empty saved shows in users file
+    
+    setDoc(doc(db, "users", email), {
+      watchlist:[]
+    })
   }
 
   const unsubscribe = onAuthStateChanged(auth,(currentUser)=> {

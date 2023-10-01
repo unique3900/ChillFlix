@@ -24,7 +24,7 @@ const ListSection = ({ id, title, url }) => {
                   <div  className='scrollbar-hide scroll-smooth '>
                       {
                           movies.slice(0,10)?.map((item, index) => (
-                            <Movie index={index} item={item}/>
+                            <Movie key={index} index={index} item={item}/>
                           ))
                       }
                   </div>

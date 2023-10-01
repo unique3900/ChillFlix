@@ -53,7 +53,7 @@ const Signup = () => {
                   <input value={password} onChange={(e)=>{
                     setPassword(e.target.value)
                   }} type="password" className='text-black px-3 py-2 border-2 border-black' placeholder='Password' />
-                  <button className='text-black font-bold w-full px-2 py-4 bg-indigo-600'>Signup</button>
+                  <button className='text-white font-bold w-full px-2 py-4 bg-indigo-600'>Signup</button>
 
                   <Link to='/login' className="tracking-wider flex gap-1 items-center ">Already a User? <span className='text-lg'>Login</span> </Link>
                 </form>

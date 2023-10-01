@@ -5,6 +5,7 @@ import Main from './LayoutComponents/Main'
 import { Route, Routes } from 'react-router-dom'
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
+import WatchList from './Pages/WatchList'
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         <Route path='/' element={<Main />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/watchlist' element={ <Main/>} />
+        <Route path='/watchlist' element={ <WatchList/>} />
       </Routes>
     </div>
   )
